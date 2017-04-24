@@ -1,0 +1,3 @@
+<h1>Flexible Payment</h1>
+
+<p> A <%= @yrs %> year loan of <%= @principle %>, with an annual interest rate of <%= @int_rt / 100 %> requires a monthly payment of <%= (((@int_rt/1200)*@principle)/(1-(1+(@int_rt/1200))**(-@yrs*12))).round(2) %>.</p>
