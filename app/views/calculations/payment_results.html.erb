@@ -1,0 +1,2 @@
+<h1> Payment Calcuation</h1>
+<p> A <%= @yrs %> year loan of <%=number_to_currency( @principle) %>, with an annual interest rate of <%= sprintf('%.4f', @int_rt)+ '%'%> requires a monthly payment of <%= number_to_currency( ((@int_rt_adj*@principle)/(1-((1+@int_rt_adj)**(-@yrs_adj)))).round(2))%>.</p>
